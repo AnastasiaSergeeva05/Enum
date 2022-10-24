@@ -27,4 +27,13 @@ public abstract class Transport {
     public float getEngineVolume() {
         return engineVolume;
     }
+
+    @Override
+    public String toString() {
+        return "Transport{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", engineVolume=" + engineVolume +
+                '}';
+    }
 }
