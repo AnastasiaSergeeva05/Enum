@@ -3,15 +3,21 @@ public class Main {
 
 
         Car car = new Car("BMW", "Z8", 1.5F);
-
-
-        Bus buses = new Bus("Ауди",
-                "A8 50 L TDI quattro", 2.5F);
-
-        Bus bus = new Bus("KIA", "Sportage", 3.5F);
+        DriverB driverB = new DriverB("Иван", 7, car);
 
 
         Truck truck = new Truck("Hyundai", "Avante", 3.4F);
+        DriverC driverC = new DriverC("Андрей", 7, truck);
+
+        Bus bus = new Bus("KIA", "Sportage", 3.5F);
+
+        Bus buses = new Bus("Ауди", "A8 50 L TDI quattro", 2.5F);
+        DriverD driverD = new DriverD("Алексей", 6, bus);
+
+        car.PitStop();
+        bus.PitStop();
+        truck.PitStop();
+
 
 
         infoCar(car);
@@ -19,10 +25,9 @@ public class Main {
         infoTruck(truck);
         infoBus(bus);
 
-        System.out.println(car.getbestTime());
-        System.out.println(bus.getbestTime());
-        System.out.println(truck.getMaxSpeed());
-
+        System.out.println(driverB  + " и максимальная скорость: " + car.getMaxSpeed() +". Время круга(сек): "+car.getbestTime());
+        System.out.println(driverC + " и максимальная скорость: " + truck.getMaxSpeed() +". Время круга(сек): "+truck.getbestTime());
+        System.out.println(driverD + " и максимальная скорость: " + bus.getMaxSpeed() +". Время круга(сек): "+bus.getbestTime());
 
 
     }

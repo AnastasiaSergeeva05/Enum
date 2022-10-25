@@ -1,7 +1,7 @@
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Car extends Transport implements Competition {
-    protected Car(String brand, String model, float engineVolume) {
+    public Car(String brand, String model, float engineVolume) {
         super(brand, model, engineVolume);
     }
 
@@ -19,7 +19,7 @@ public class Car extends Transport implements Competition {
 
     @Override
     public void PitStop() {
-        System.out.printf("Машина %s %s в ПитСтопе",getBrand(),getModel());
+        System.out.printf("Машина %s %s в ПитСтопе \n",getBrand(),getModel());
 
     }
 
