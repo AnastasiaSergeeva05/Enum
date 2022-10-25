@@ -1,4 +1,6 @@
-public class Truck extends Transport{
+import java.util.concurrent.ThreadLocalRandom;
+
+public class Truck extends Transport  implements Competition{
     protected Truck(String brand, String model, float engineVolume) {
         super(brand, model, engineVolume);
     }
@@ -13,5 +15,21 @@ public class Truck extends Transport{
     public void stopMove() {
         System.out.printf("Грузовик %s %s заканчивает двигаться",getBrand(),getModel());
 
+    }
+
+    @Override
+    public void PitStop() {
+        System.out.printf("Грузовики %s %s в ПитСтопе",getBrand(),getModel());
+
+    }
+
+    @Override
+    public int getbestTime() {
+        return ThreadLocalRandom.current().nextInt(1,1500);
+    }
+
+    @Override
+    public int getMaxSpeed() {
+        return ThreadLocalRandom.current().nextInt(1,190);
     }
 }

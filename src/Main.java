@@ -19,6 +19,11 @@ public class Main {
         infoTruck(truck);
         infoBus(bus);
 
+        System.out.println(car.getbestTime());
+        System.out.println(bus.getbestTime());
+        System.out.println(truck.getMaxSpeed());
+
+
 
     }
 
@@ -26,16 +31,18 @@ public class Main {
         System.out.println(car);
     }
 
-        public static void infoBus (Bus bus ) {
-            System.out.println(bus);
-        }
+    public static void infoBus(Bus bus) {
+        System.out.println(bus);
+    }
 
-            public static void infoBuses(Bus buses) {
-                System.out.println(buses);
-            }
+    public static void infoBuses(Bus buses) {
+        System.out.println(buses);
+    }
 
-                public static void infoTruck(Truck truck ) {
-                    System.out.println(truck);
+    public static void infoTruck(Truck truck) {
+        System.out.println(truck);
 
-            }
-        }
+    }
+
+
+}

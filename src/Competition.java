@@ -1,4 +1,4 @@
-public interface competition {
+public interface Competition {
     void PitStop();
 
     int getbestTime();
