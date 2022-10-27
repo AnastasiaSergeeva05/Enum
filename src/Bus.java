@@ -1,8 +1,11 @@
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Bus extends Transport implements Competition {
-    public Bus(String brand, String model, float engineVolume) {
+    private final Capacity capacity;
+    public Bus(String brand, String model, float engineVolume,Capacity capacity) {
+
         super(brand, model, engineVolume);
+        this.capacity = capacity;
     }
 
     @Override
@@ -15,7 +18,13 @@ public class Bus extends Transport implements Competition {
         System.out.printf("Автобус %s %s начинает двигаться",getBrand(),getModel());
 
     }
-
+public void infoType(){
+        if (this.capacity != null){
+            System.out.println(capacity);
+        }else {
+            System.out.println("нет данных");
+        }
+}
     @Override
     public void PitStop() {
         System.out.printf("Автобус %s %s в ПитСтопе \n",getBrand(),getModel());

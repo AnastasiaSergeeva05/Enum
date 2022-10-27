@@ -1,9 +1,13 @@
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Car extends Transport implements Competition {
-    public Car(String brand, String model, float engineVolume) {
+    private final TypeBody bodyType;
+    public Car(String brand, String model, float engineVolume,TypeBody bodyType) {
         super(brand, model, engineVolume);
-    }
+        this.bodyType = bodyType;
+
+        }
+
 
     @Override
     public void startMove() {
@@ -21,6 +25,14 @@ public class Car extends Transport implements Competition {
     public void PitStop() {
         System.out.printf("Машина %s %s в ПитСтопе \n",getBrand(),getModel());
 
+    }
+
+    public void infoType(){
+        if (this.bodyType != null){
+            System.out.println(bodyType);
+        }else {
+            System.out.println("Нет данных");
+        }
     }
 
     @Override

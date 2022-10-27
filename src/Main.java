@@ -2,21 +2,26 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Car car = new Car("BMW", "Z8", 1.5F);
+        Car car = new Car("BMW", "Z8", 1.5F,TypeBody.SEDAN);
         DriverB driverB = new DriverB("Иван", 7, car);
 
 
-        Truck truck = new Truck("Hyundai", "Avante", 3.4F);
+        Truck truck = new Truck("Hyundai", "Avante", 3.4F,TypeCapacity.N2);
         DriverC driverC = new DriverC("Андрей", 7, truck);
 
-        Bus bus = new Bus("KIA", "Sportage", 3.5F);
+        Bus bus = new Bus("KIA", "Sportage", 3.5F,Capacity.MEDIUM);
 
-        Bus buses = new Bus("Ауди", "A8 50 L TDI quattro", 2.5F);
+        Bus buses = new Bus("Ауди", "A8 50 L TDI quattro", 2.5F,Capacity.SMALL);
         DriverD driverD = new DriverD("Алексей", 6, bus);
 
         car.PitStop();
         bus.PitStop();
         truck.PitStop();
+
+        car.infoType();
+        bus.infoType();
+        truck.infoType();
+
 
 
 
