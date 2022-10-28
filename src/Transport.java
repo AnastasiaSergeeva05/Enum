@@ -1,3 +1,5 @@
+import java.util.concurrent.ThreadLocalRandom;
+
 public abstract class Transport {
 
     private final String brand;
@@ -14,9 +16,10 @@ public abstract class Transport {
 
     public abstract void startMove();
 
-
-
     public abstract void stopMove();
+
+    public abstract void passDiagnostics();
+
 
     public String getBrand() {
         return brand;

@@ -21,6 +21,13 @@ public class Truck extends Transport implements Competition {
     }
 
     @Override
+    public void passDiagnostics() {
+        if (ThreadLocalRandom.current().nextBoolean()){
+            throw  new DiagnoistiksRun("Грузовик " +getBrand() + " " +getModel()+" не прошел ТО" );
+        }
+    }
+
+    @Override
     public void PitStop() {
         System.out.printf("Грузовики %s %s в ПитСтопе\n", getBrand(), getModel());
 

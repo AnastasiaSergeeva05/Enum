@@ -18,7 +18,13 @@ public class Bus extends Transport implements Competition {
         System.out.printf("Автобус %s %s начинает двигаться",getBrand(),getModel());
 
     }
-public void infoType(){
+
+    @Override
+    public void passDiagnostics() {
+        System.out.println("Автобус " + getModel() + getBrand() + " не нужно ТО");
+    }
+
+    public void infoType(){
         if (this.capacity != null){
             System.out.println(capacity);
         }else {

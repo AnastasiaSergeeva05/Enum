@@ -22,6 +22,15 @@ public class Car extends Transport implements Competition {
     }
 
     @Override
+    public void passDiagnostics() {
+        if (ThreadLocalRandom.current().nextBoolean()){
+            throw new DiagnoistiksRun("Машина " + getBrand() + " " + getModel()+" не прошла диагностику.");
+        }
+    }
+
+
+
+    @Override
     public void PitStop() {
         System.out.printf("Машина %s %s в ПитСтопе \n",getBrand(),getModel());
 
