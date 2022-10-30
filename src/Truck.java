@@ -22,7 +22,7 @@ public class Truck extends Transport implements Competition {
 
     @Override
     public void passDiagnostics() {
-        if (ThreadLocalRandom.current().nextBoolean()){
+         if (ThreadLocalRandom.current().nextBoolean()){
             throw  new DiagnoistiksRun("Грузовик " +getBrand() + " " +getModel()+" не прошел ТО" );
         }
      }
