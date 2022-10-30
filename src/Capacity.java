@@ -17,5 +17,5 @@ public enum Capacity {
     public String toString() {
         String capacity = capacityFrom > 0 ? capacityFrom + " - " + capacityTo : String.valueOf(capacityTo);
         return "Вместимость: " +capacity + " мест.";
-    }
+     }
 }

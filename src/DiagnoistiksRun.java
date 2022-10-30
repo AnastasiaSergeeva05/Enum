@@ -4,5 +4,5 @@ public class DiagnoistiksRun extends RuntimeException{
 
     public DiagnoistiksRun(String message) {
         super(message);
-    }
+     }
 }

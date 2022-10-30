@@ -11,7 +11,7 @@ public enum TypeCapacity {
         this.capacityFrom = capacityFrom;
         this.capacityTo = capacityTo;
 
-    }
+     }
 
     @Override
     public String toString() {

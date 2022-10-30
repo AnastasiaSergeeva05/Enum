@@ -18,7 +18,7 @@ public abstract class Transport {
 
     public abstract void stopMove();
 
-    public abstract void passDiagnostics();
+     public abstract void passDiagnostics();
 
 
     public String getBrand() {

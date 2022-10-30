@@ -15,7 +15,7 @@ public class Bus extends Transport implements Competition {
 
     @Override
     public void stopMove() {
-        System.out.printf("Автобус %s %s начинает двигаться",getBrand(),getModel());
+        System.out.printf("Автобус %s %s начинает двигаться",getBrand(), getModel());
 
     }
 

@@ -26,7 +26,7 @@ public class Car extends Transport implements Competition {
         if (ThreadLocalRandom.current().nextBoolean()){
             throw new DiagnoistiksRun("Машина " + getBrand() + " " + getModel()+" не прошла диагностику.");
         }
-    }
+     }
 
 
 
